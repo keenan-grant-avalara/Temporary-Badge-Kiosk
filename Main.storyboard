@@ -89,9 +89,145 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="HAl-54-rkd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2167.96875" y="1013.6718749999999"/>
+            <point key="canvasLocation" x="3704" y="976"/>
         </scene>
-        <!--Welcome!-->
+        <!--Peripheral View Controller-->
+        <scene sceneID="sZO-jj-pUp">
+            <objects>
+                <viewController id="TpA-0d-td4" customClass="PeripheralViewController" customModule="KioskProjB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dY3-7y-8ZB"/>
+                        <viewControllerLayoutGuide type="bottom" id="lKd-0s-gHi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O6D-FI-MdF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w39-Sc-azf">
+                                <rect key="frame" x="236" y="461" width="296" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter your Full name (First and Last)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDB-1q-mQj">
+                                <rect key="frame" x="172" y="310" width="425" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aM1-AX-vNn">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="nOC-vJ-LJ3">
+                            <connections>
+                                <action selector="cancelButton:" destination="TpA-0d-td4" id="e1o-iu-Bz7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="peripheralName" destination="w39-Sc-azf" id="gwp-PQ-b6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6LX-zA-7DU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="2478"/>
+        </scene>
+        <!--Peripheral View Controller-->
+        <scene sceneID="fbm-RE-mOX">
+            <objects>
+                <viewController id="dsw-Dj-f9H" customClass="PeripheralViewController" customModule="KioskProjB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lE2-xK-aQM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Unq-DA-c4K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lhh-tt-Toz">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Device are you checking out?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujW-hh-bON">
+                                <rect key="frame" x="238" y="192" width="293" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoR-fr-0Rn">
+                                <rect key="frame" x="278" y="523" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple Multiport Adapter"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="MNX-Dv-OGw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIQ-7J-c0d">
+                                <rect key="frame" x="20" y="523" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Windows Wireless Mouse"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="xi2-X9-w9U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQl-1M-6jb">
+                                <rect key="frame" x="20" y="654" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Windows Wireless Keyboard"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="RQD-5j-u60"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxg-xO-cG0">
+                                <rect key="frame" x="534" y="392" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple Ethernet Adapter"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="3cf-W4-yHq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnN-s9-gOH">
+                                <rect key="frame" x="277" y="392" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple Magic Mouse"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="xno-FK-LiU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9X-dV-cYy">
+                                <rect key="frame" x="534" y="523" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple Ten Key Wired Keyboard"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="R45-dt-Ng2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tu-ld-5Ni">
+                                <rect key="frame" x="278" y="654" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple Wireless Keyboard"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="Ucq-BJ-sgr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcm-iU-kIb">
+                                <rect key="frame" x="20" y="392" width="214" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logitech USB Headset"/>
+                                <connections>
+                                    <segue destination="63H-g1-Msu" kind="presentation" id="N3D-oo-Vvk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UFY-3w-qXC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulF-dp-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="976"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="QqV-rC-3CY">
             <objects>
                 <viewController id="lDN-Pk-Iqz" sceneMemberID="viewController">
@@ -122,21 +258,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hh-7J-GUU">
-                                <rect key="frame" x="20" y="430" width="160" height="82"/>
+                                <rect key="frame" x="19" y="430" width="162" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Tickets">
+                                <state key="normal" title="Check out device">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dsw-Dj-f9H" kind="show" id="LVi-eD-g5q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome!" id="LPy-Dd-VJs"/>
+                    <navigationItem key="navigationItem" title="Home" id="LPy-Dd-VJs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRA-DK-Qww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1161.71875" y="1013.6718749999999"/>
+            <point key="canvasLocation" x="370" y="976"/>
         </scene>
         <!--Checked Out Temp Badges-->
         <scene sceneID="IzT-VK-ah4">
@@ -151,7 +290,7 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jv3-95-XOp" id="sAD-uA-hdF" customClass="BadgeTableViewCell" customModule="KioskProjB" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="76"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="77"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS5-PT-tHG">
@@ -165,7 +304,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameCell" destination="YS5-PT-tHG" id="T8W-Cg-kEW"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowInfo" id="7rJ-sd-TYb"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowInfo" id="kky-fT-igP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -192,7 +331,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNC-Qw-9FA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601" y="1014"/>
+            <point key="canvasLocation" x="2131" y="976"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ob-cK-wVJ">
@@ -210,7 +349,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zz4-4G-siU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1958" y="1014"/>
+            <point key="canvasLocation" x="370" y="71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uzz-ib-rM3">
@@ -228,7 +367,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHE-8N-ncK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-273" y="1014"/>
+            <point key="canvasLocation" x="1266" y="976"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="85h-Jo-19u">
@@ -246,10 +385,48 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JS0-1A-ne6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="1443"/>
+            <point key="canvasLocation" x="2900" y="1442.578125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iB5-MM-bNJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VmT-Wh-MhV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ARn-NW-YMz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dsw-Dj-f9H" kind="relationship" relationship="rootViewController" id="OdJ-8j-PCY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMO-bj-5rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qXK-cO-jjK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="63H-g1-Msu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BcU-gG-rzj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TpA-0d-td4" kind="relationship" relationship="rootViewController" id="Xrn-EX-raT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxg-bC-R9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="1721"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7rJ-sd-TYb"/>
+        <segue reference="kky-fT-igP"/>
+        <segue reference="xi2-X9-w9U"/>
+        <segue reference="OdJ-8j-PCY"/>
     </inferredMetricsTieBreakers>
 </document>
