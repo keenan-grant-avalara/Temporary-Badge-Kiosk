@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         badgeInput.delegate = self
         nameInput.delegate = self
-        
+
         //Temporary Date placeholder
         let currentDate = Date()
         let formatter = DateFormatter()

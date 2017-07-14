@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="87T-rp-gxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9C3-NM-e0t">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -230,7 +230,7 @@
         <!--Home-->
         <scene sceneID="QqV-rC-3CY">
             <objects>
-                <viewController id="lDN-Pk-Iqz" sceneMemberID="viewController">
+                <viewController id="lDN-Pk-Iqz" customClass="HomePageViewController" customModule="KioskProjB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h2W-JK-5Tb"/>
                         <viewControllerLayoutGuide type="bottom" id="kmE-K3-Pg4"/>
@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRA-DK-Qww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="976"/>
+            <point key="canvasLocation" x="368" y="976"/>
         </scene>
         <!--Checked Out Temp Badges-->
         <scene sceneID="IzT-VK-ah4">
@@ -290,7 +290,7 @@
                                 <rect key="frame" x="0.0" y="28" width="768" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jv3-95-XOp" id="sAD-uA-hdF" customClass="BadgeTableViewCell" customModule="KioskProjB" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="77"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="76.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS5-PT-tHG">
@@ -349,7 +349,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zz4-4G-siU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="71"/>
+            <point key="canvasLocation" x="831" y="-43"/>
+        </scene>
+        <!--Google Sign In View Controller-->
+        <scene sceneID="OZp-bw-tXv">
+            <objects>
+                <viewController id="9C3-NM-e0t" customClass="GoogleSignInViewController" customModule="KioskProjB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a2h-s6-ZAq"/>
+                        <viewControllerLayoutGuide type="bottom" id="dqh-1Q-79y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wWk-pW-3mS" customClass="GIDSignInButton">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="lDN-Pk-Iqz" kind="show" identifier="PleaseMove" id="ykW-GB-Q4A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blW-i8-cBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="-43"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uzz-ib-rM3">
@@ -425,8 +446,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kky-fT-igP"/>
+        <segue reference="ykW-GB-Q4A"/>
+        <segue reference="LVi-eD-g5q"/>
         <segue reference="xi2-X9-w9U"/>
-        <segue reference="OdJ-8j-PCY"/>
+        <segue reference="ZLe-DL-riJ"/>
     </inferredMetricsTieBreakers>
 </document>
